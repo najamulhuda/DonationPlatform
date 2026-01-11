@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Donation Collection Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- Sidebar -->
+    <nav class="col-md-2 sidebar d-md-block bg-dark text-white">
+      <div class="position-sticky">
+        <h4 class="text-center py-3 border-bottom">U Devs</h4>
+        <ul class="nav flex-column px-2">
+          <li class="nav-item"><a class="nav-link active" href="#">Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#causes">Donation Causes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#needy">Needy Contacts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#donors">Donation Givers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+          <li class="nav-item"><a class="nav-link" href="#footer">About / Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-md-10 ms-sm-auto px-4">
+
+      <!-- Dashboard Stats -->
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h6>Total Raised</h6>
+              <h4>PKR 1,250,000</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h6>Active Causes</h6>
+              <h4>18</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm">
+            <div class="card-body text-center">
+              <h6>Total Donors</h6>
+              <h4>320+</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Donation Causes -->
+      <section id="causes" class="mt-5">
+        <h3 class="mb-4">Donation Causes</h3>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Medical Emergency</h5>
+                <span class="badge bg-danger mb-2">Urgent</span>
+                <p class="card-text">Help a patient requiring urgent surgery.</p>
+                <p>Required: PKR 300,000</p>
+                <p>Collected: PKR 180,000</p>
+                <div class="progress mb-3">
+                  <div class="progress-bar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#causeModal">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body">
+                <h5 class="card-title">Education Support</h5>
+                <p class="card-text">School fee support for underprivileged students.</p>
+                <p>Required: PKR 200,000</p>
+                <p>Collected: PKR 90,000</p>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-success" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#causeModal">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Needy Contacts -->
+      <section id="needy" class="mt-5">
+        <h3 class="mb-4">Verified Needy Contacts</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped">
+            <thead class="table-dark">
+              <tr>
+                <th>Name</th>
+                <th>Category</th>
+                <th>City</th>
+                <th>Contact</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ali Raza</td>
+                <td>Medical</td>
+                <td>Lahore</td>
+                <td>0309-4110799</td>
+                <td><span class="badge bg-success">Verified</span></td>
+              </tr>
+              <tr>
+                <td>Sara Khan</td>
+                <td>Education</td>
+                <td>Karachi</td>
+                <td>0300-3455667</td>
+                <td><span class="badge bg-success">Verified</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Donation Givers -->
+      <section id="donors" class="mt-5 mb-5">
+        <h3 class="mb-4">Recent Donors</h3>
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead class="table-light">
+              <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Message</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Farhan</td>
+                <td>PKR 10,000</td>
+                <td>One-time</td>
+                <td>09-01-2026</td>
+                <td>May Allah help them</td>
+              </tr>
+              <tr>
+                <td>M. Usman</td>
+                <td>PKR 5,000</td>
+                <td>Monthly</td>
+                <td>08-01-2026</td>
+                <td>Stay strong</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+</div>
+
+<!-- Donation Details Modal -->
+<div class="modal fade" id="causeModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Donation Details</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Cause:</strong> Medical Emergency Surgery</p>
+        <p><strong>Description:</strong> Funds required for urgent heart surgery.</p>
+        <p><strong>Beneficiary:</strong> Verified Patient</p>
+        <p><strong>Contact:</strong> Hospital Admin (03XX-XXXXXXX)</p>
+        <span class="badge bg-success">Verified</span>
+        <span class="badge bg-warning">High Priority</span>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-success">Proceed to Donate</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer id="footer" class="bg-dark text-white mt-5 p-4 text-center">
+  <p class="mb-1">© 2026 U Devs | Donation Collection Platform</p>
+  <p class="mb-0">Email: info@udevs.com | Phone: +92-309-4110799</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
